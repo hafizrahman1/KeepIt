@@ -15,11 +15,12 @@
 <!--Display created notes-->
 <% if !current_user.notes.empty? %>
 <h3>List of notes:</h3>
+
+<div class="container">
 <div class="row">
   <%current_user.notes.reverse.each do |note| %>
     <div class="col-xs-4 well" style="margin: 5px; border: 1px;width: 32%;">
       <h5><%= note.content %></h5>
-
 
       <!--Topics-->
       <%note.topics.each do |topic|%>
@@ -30,28 +31,14 @@
       <a class="btn btn-default btn-xs" href="/notes/<%=note.id%>/delete"><i class="glyphicon glyphicon-trash"></i></a></p>
     </div>
   <% end %>
-</div>
+</div><!--row-->
 <% end %>
 
 <!--Add notes-->
-<div class="row">
-  <div class="col-xs-12">
-  <p><a class="btn btn-primary" href="/notes/new">Add Note</a></p>
+  <div class="row">
+    <div class="col-xs-12" style="padding: 0px" >
+    <p><a class="btn btn-primary" href="/notes/new">Add Note</a></p>
+    </div>
   </div>
-</div>
 
-<!-- <span class="label label-default">Default</span>
-<span class="label label-primary">Primary</span>
-<span class="label label-success">Success</span>
-<span class="label label-info">Info</span>
-<span class="label label-warning">Warning</span>
-<span class="label label-danger">Danger</span> -->
-<!-- <form id="task-form" action="/notes" method="post">
-  <input type="text" name="topic" placeholder="topic" required><br>
-  <input id="taskInput" type="text" name="content" placeholder="note content" required><br><br>
-  <input class="btn btn-primary" type="submit">
-</form> -->
-
-<!--Update notes -->
-
-<!--Delete notes -->
+</div><!--Container-->
