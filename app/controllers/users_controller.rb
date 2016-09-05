@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   	if logged_in?
       redirect "/users/:id"
   	else
-  	  erb :'users/create_user', locals: {message: "Please signup before you sign in"}
+  	  erb :'users/create_user'
   	end
   end
 
