@@ -1,0 +1,13 @@
+<h3> Welcome <%= current_user.username %></h3>
+<h4> List of Notes: </h4>
+
+<% current_user.notes.each do |note| %>
+  <div class="col-sm-3">
+    <h6>Content: <%= note.content%></h6>
+    <!--Topics-->
+    <label>Topic:</label>
+    <%note.topics.each do |topic|%>
+      <%= topic.name %>
+    <%end%>
+  </div>
+<% end %>
