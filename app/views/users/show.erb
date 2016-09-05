@@ -4,6 +4,14 @@
   </div>
 </div>
 
+<!--Display flash[:message] if available -->
+<% if flash.has?(:message) %>
+<div class="alert alert-dismissible alert-success animated fadeInDown">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  <p><%= flash[:message] %></p>
+</div>
+<% end %>
+
 <!--Display created notes-->
 <% if !current_user.notes.empty? %>
 <h3>List of notes:</h3>
