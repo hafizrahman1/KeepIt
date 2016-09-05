@@ -15,7 +15,6 @@ class UsersController < ApplicationController
   	else
   	  @user = User.create(username: params[:username], password: params[:password])
   	  session[:user_id] = @user.id
-  	  #erb :"users/show"
   	  redirect "/users/#{@user.id}"
   	end
   end
@@ -33,7 +32,6 @@ class UsersController < ApplicationController
 
   	if user && user.authenticate(params[:password])
   	  session[:user_id] = user.id
-  	  #erb :"/users/show"
   	  redirect "/users/#{user.id}"
   	else
   	  redirect'/login'
