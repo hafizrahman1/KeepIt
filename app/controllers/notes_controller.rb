@@ -21,15 +21,15 @@ class NotesController < ApplicationController
 	  @note= Note.find_or_create_by(params[:id])
       erb :'notes/show_note'
 	end
-
+    
+    # add the new note with associated topic
 	post '/notes' do
 
 	  if params[:topic] == "" || params[:content] == ""
 	    redirect to '/notes/new'
 	  else
 	  	@note = Note.create(content: params[:content], user_id: current_user.id)
-	  	#@topic= Topic.create(name: params[:topic])
-	    #@note.topics.build(name: params[:topic])
+
 	    if !params[:topic].empty?
 	  	  @note.topics << Topic.find_or_create_by(name: params[:topic])
 	  	end
