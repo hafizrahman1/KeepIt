@@ -16,7 +16,6 @@
 <% if !current_user.notes.empty? %>
 <h3>List of notes:</h3>
 
-<div class="container">
 <div class="row">
   <%current_user.notes.reverse.each do |note| %>
     <div class="col-xs-4 well" style="margin: 5px; border: 1px;width: 32%;">
@@ -37,8 +36,7 @@
 <!--Add notes-->
   <div class="row">
     <div class="col-xs-12" style="padding: 0px" >
-    <p><a class="btn btn-primary" href="/notes/new">Add Note</a></p>
+    <a class="btn btn-primary" href="/notes/new">Add Note</a>
     </div>
   </div>
 
-</div><!--Container-->
