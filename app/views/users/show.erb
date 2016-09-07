@@ -20,7 +20,7 @@
 <div class="row">
   <%current_user.notes.reverse.each do |note| %>
     <div class="col-xs-4 well" style="margin: 5px; border: 1px;width: 32%;">
-      <h5><%= note.content %></h5>
+      <h6><%= note.content %></h6>
 
       <!--Topics-->
       <%note.topics.each do |topic|%>
