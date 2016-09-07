@@ -30,20 +30,3 @@
     <a class="btn btn-danger" href="/notes/<%=@note.id%>/delete">Delete</a>
   </fieldset>
   </form>
-
-
-
-
-<!-- <form method="post" action="/notes/<%=@note.id%>">
-  <input id="hidden" type="hidden" name="_method" value="PATCH">
-<textarea name="note[content]"><%= @note.content %></textarea><br><br>
-  <% Topic.all.each do |topic| %>
-    <label><%= topic.name %></label>
-    <input type="checkbox" name="note[topic_ids][]" value="<%= topic.id %>" id="<%= topic.name %>" <%='checked' if @note.topics.include?(topic) %>>
-  <% end %>
- <br><br><label>Add new topic:</label>
- <input type="text" id="new_topic" name="topic[name]"><br></br>
- <a href="/"><button type="button" class="btn btn-default" style="margin-right: 10px">Cancel</button></a>
-  <input class="btn btn-success btn" type="submit" style="margin-right: 10px"value="Update">
-  <a class="btn btn-danger" href="/notes/<%=@note.id%>/delete">Delete</a>
-</form> -->
