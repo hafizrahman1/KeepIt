@@ -4,8 +4,12 @@ a:link, a:visited, a:hover, a:active {
 	background-color: none;
 /*	color: #f1cf63;*/
 }
+
+
 /*/////Footer/////*/
-.container .footer {
+div#footer.navbar.navbar-default.navbar-fixed-bottom {
+	min-height: 20px;
+	opacity: 0.6;
 	background-color: #eee;
 	text-align: center;
     color: #8E561A;
@@ -49,20 +53,20 @@ input[type="submit"]:hover {
   border-left: 1px solid #ccc;
 }
 
-		.nav_bar nav a {
-			display: inline-block;
-			width: 20%;
-			margin: 0;
-			padding: 22px 0;
-			text-transform: uppercase;
-			color: black;
-			text-align: center;
-			border-right: 1px solid #ccc;
-			text-decoration: none;
-			font: 20px "Trebuchet MS", Arial, sans-serif;
-		}
+.nav_bar nav a {
+	display: inline-block;
+	width: 20%;
+	margin: 0;
+	padding: 22px 0;
+	text-transform: uppercase;
+	color: black;
+	text-align: center;
+	border-right: 1px solid #ccc;
+	text-decoration: none;
+	font: 20px "Trebuchet MS", Arial, sans-serif;
+}
 
-		.nav_bar nav a.selected {
-			background: black;
-			color: white;
-		}
+.nav_bar nav a.selected {
+	background: black;
+	color: white;
+}
