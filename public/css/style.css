@@ -10,7 +10,7 @@ a:link, a:visited, a:hover, a:active {
 div#footer.navbar.navbar-default.navbar-fixed-bottom {
 	min-height: 20px;
 	opacity: 0.6;
-	background-color: #eee;
+/*	background-color: #eee;*/
 	text-align: center;
     color: #8E561A;
 }
