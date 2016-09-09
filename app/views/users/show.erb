@@ -18,7 +18,7 @@
 
 <div class="row notes">
   <%current_user.notes.reverse.each do |note| %>
-    <div class="col-xs-4 well" style="margin: 5px; border: 1px;width: 32%;">
+    <div class="col-xs-4 well" style="margin: 5px; border: 1px;width: 32%; padding: 15px;">
       <h6><%= note.content %></h6>
 
       <!--Topics-->
@@ -47,7 +47,7 @@
   opacity: 0.6;
  /* background-color: #eee;*/
   text-align: center;
-    color: #8E561A;
+  color: #8E561A;
 }
 </style>
 

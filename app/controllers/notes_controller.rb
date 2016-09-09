@@ -24,7 +24,7 @@ class NotesController < ApplicationController
     
     # add the new note with associated topic
 	post '/notes' do
-
+      
 	  if params[:topic] == "" || params[:content] == ""
 	    redirect to '/notes/new'
 	  else

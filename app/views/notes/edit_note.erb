@@ -3,7 +3,7 @@
 <form class="form-horizontal" action="/notes/<%=@note.id%>" method="post">
   <input id="hidden" type="hidden" name="_method" value="PATCH">
   <fieldset>
-  	<legend class="col-xs-12">Edit the note</legend>
+  	<legend>Edit the note</legend>
   	<div class="form-group">
   	<label for="content" control-label></label>
   	  <div class="col-xs-12">
@@ -22,8 +22,10 @@
   	</div><br>
 
   	<div class="form-group">
-  	 <label for="new_topic" control-label>Add new topic:</label>
-  	   <input type="text" id="new_topic" name="topic[name]">
+      <div class="col-xs-12">
+  	     <label for="new_topic" control-label>Add new topic:</label>
+  	     <input type="text" id="new_topic" name="topic[name]">
+       </div>
   	</div><br>	
     <a href="/users/<%= current_user.id %>"><button type="button" class="btn btn-default" style="margin-right: 10px">Cancel</button></a>
       <input class="btn btn-success btn" type="submit" style="margin-right: 10px"value="Update">
